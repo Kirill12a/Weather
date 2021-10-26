@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var weatherData = WeatherData() //  структура запроса
+    var weatherData = WeatherData()  //  структура запроса
     
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var weatherDescription: UILabel!
@@ -35,8 +35,8 @@ extension ViewController{
         
         
         
-        //https://api.openweathermap.org/data/2.5/weather?lat=55.897&lon=37.4297&lang=ru&units=metric&appid=6cbbebf9bfff951cf0aa15f5d206017c
-        //Снизу новый апи, с верху старый //https://api.openweathermap.org/data/2.5/weather?q=Москва&lang=ru&units=metric&appid=6cbbebf9bfff951cf0aa15f5d206017c
+         //https://api.openweathermap.org/data/2.5/weather?lat=55.897&lon=37.4297&lang=ru&units=metric&appid=6cbbebf9bfff951cf0aa15f5d206017c
+         //Снизу новый апи, с верху старый //https://api.openweathermap.org/data/2.5/weather?q=Москва&lang=ru&units=metric&appid=6cbbebf9bfff951cf0aa15f5d206017c
         
         let task = session.dataTask(with: url) { (data, response, error) in
             guard error == nil else{
